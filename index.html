@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../styles/burger.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>Lesson 13 - Burger Menu</title>
 </head>
 
@@ -16,8 +17,8 @@
         </div>
 
         <!-- NAV -->
-        <nav>
-            <ul class="nav-list">
+        <nav id="nav-bar" class="nav">
+            <ul id="nav-list" class="nav-list">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Contact</a></li>
@@ -25,7 +26,7 @@
         </nav>
 
         <!-- Burger Menu -->
-        <div class="burger">
+        <div class="burger" onclick="burgerMenu()">
             <i class="fa fa-bars"></i>
         </div>
 
@@ -42,5 +43,16 @@
         </div>
     </main>
 
+
+    <script>
+        function burgerMenu() {
+        var navList = document.getElementById("nav-list");
+        if (navList.classList.contains("nav-active")) {
+            navList.classList.remove("nav-active");
+        } else {
+            navList.classList.add("nav-active");
+        }
+    }
+    </script>
 </body>
 </html>
